@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hair salon Pomme | ちいさくてかわいい美容室</title>
+<meta name="description" content="ふんわり、かわいく。あなたの「好き」をカタチにする、ちいさな美容室 Pomme（ポム）。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#FF7AA2; --pink-d:#E8557F; --pink-l:#FFE3EC; --pink-xl:#FFF5F8;
+  --mint:#9ED9CC; --mint-l:#E6F6F2; --yellow:#FFD36E; --lav:#C7B8F5;
+  --ink:#5A3E46; --muted:#8C7179; --white:#fff;
+  --r:28px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--pink-xl);color:var(--ink);font-family:"Zen Maru Gothic",system-ui,sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+html,body{overflow-x:clip}
+.hero-grid>*,.salon-grid>*,.access-grid>*{min-width:0}
+@media (max-width:600px){.hero p br{display:none}}
+a{color:inherit}
+.en{font-family:"Quicksand",sans-serif;letter-spacing:.12em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:96px 0;position:relative}
+.sec-head{text-align:center;margin-bottom:48px}
+.sec-head .en{display:block;color:var(--pink);font-weight:700;font-size:15px}
+.sec-head h2{margin:4px 0 0;font-size:30px;font-weight:700}
+.sec-head h2::after{content:"";display:block;width:56px;height:6px;margin:14px auto 0;border-radius:6px;background:repeating-linear-gradient(90deg,var(--pink) 0 10px,var(--mint) 10px 20px,var(--yellow) 20px 30px)}
+
+/* header */
+header{position:sticky;top:0;z-index:10;background:rgba(255,245,248,.88);backdrop-filter:blur(10px);border-bottom:2px dashed #FFD0DE}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700}
+.logo-mark{width:40px;height:40px;border-radius:50%;background:var(--pink);display:grid;place-items:center;color:#fff;font-size:20px;box-shadow:0 4px 0 var(--pink-d)}
+.logo b{font-family:"Quicksand";font-size:24px;letter-spacing:.06em;color:var(--pink-d)}
+.logo small{display:block;font-size:10px;color:var(--muted);letter-spacing:.2em;line-height:1}
+.menu{display:flex;gap:26px;font-size:14px;font-weight:500}
+.menu a{text-decoration:none}
+.menu a:hover{color:var(--pink-d)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--pink);color:#fff;text-decoration:none;font-weight:700;padding:14px 30px;border-radius:999px;box-shadow:0 5px 0 var(--pink-d);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(3px);box-shadow:0 2px 0 var(--pink-d)}
+.btn.sm{padding:9px 20px;font-size:14px}
+.btn.ghost{background:#fff;color:var(--pink-d);box-shadow:0 5px 0 #FFC2D4}
+@media (max-width:860px){.menu{display:none}}
+
+/* hero */
+.hero{padding:56px 0 110px;overflow:hidden;background:
+  radial-gradient(circle at 8% 20%,#FFD6E4 0 70px,transparent 71px),
+  radial-gradient(circle at 92% 85%,var(--mint-l) 0 120px,transparent 121px),
+  var(--pink-xl)}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:40px}
+.badge{display:inline-block;background:#fff;border:2px solid var(--pink);color:var(--pink-d);font-weight:700;font-size:13px;padding:4px 16px;border-radius:999px}
+.hero h1{font-size:clamp(30px,4vw,48px);line-height:1.45;margin:18px 0 18px;font-weight:700}
+.hero h1 .nw{white-space:nowrap}
+.hero h1 .mark{background:linear-gradient(transparent 62%,#FFE07A 62%)}
+.hero p{color:var(--muted);margin:0 0 32px;font-size:16px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:16px}
+.hero-img{position:relative}
+.hero-img img{width:100%;animation:float 5s ease-in-out infinite}
+.bubble{position:absolute;background:#fff;border-radius:20px;padding:10px 16px;font-size:13px;font-weight:700;box-shadow:0 8px 24px rgba(232,85,127,.15)}
+.bubble.b1{top:8%;left:-4%}
+.bubble.b2{bottom:10%;right:-2%;color:#2F8C78}
+@keyframes float{50%{transform:translateY(-12px)}}
+.wave{position:absolute;left:0;right:0;bottom:-1px;height:60px;width:100%}
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr;text-align:center}
+  .hero h1{font-size:34px}
+  .hero-btns{justify-content:center}
+  .hero-img{max-width:380px;margin:0 auto}
+  .bubble.b1{left:0}.bubble.b2{right:0}
+}
+
+/* concept */
+.concept{background:#fff}
+.points{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.point{background:var(--pink-xl);border-radius:var(--r);padding:36px 26px 30px;text-align:center;position:relative}
+.point:nth-child(2){background:var(--mint-l)}
+.point:nth-child(3){background:#FFF6DC}
+.point .num{position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-family:"Quicksand";font-weight:700;background:var(--pink);color:#fff;width:44px;height:44px;border-radius:50%;display:grid;place-items:center}
+.point:nth-child(2) .num{background:#5CC0AA}
+.point:nth-child(3) .num{background:#F0B73A}
+.point .ico{font-size:44px;line-height:1;margin:6px 0 10px}
+.point h3{margin:0 0 8px;font-size:19px}
+.point p{margin:0;color:var(--muted);font-size:14px}
+@media (max-width:860px){.points{grid-template-columns:1fr;gap:36px}}
+
+/* style gallery */
+.styles{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{background:#fff;border-radius:var(--r);padding:14px 14px 20px;box-shadow:0 10px 30px rgba(232,85,127,.08);transition:transform .2s}
+.card:hover{transform:translateY(-6px) rotate(-1deg)}
+.card img{border-radius:20px;aspect-ratio:1}
+.card h3{margin:14px 6px 2px;font-size:17px}
+.card p{margin:0 6px;font-size:13px;color:var(--muted)}
+.tag{display:inline-block;margin:10px 6px 0;font-size:12px;background:var(--pink-l);color:var(--pink-d);padding:2px 12px;border-radius:999px}
+@media (max-width:860px){.styles{grid-template-columns:repeat(2,1fr);gap:14px}}
+
+/* menu */
+.menu-sec{background:var(--mint-l)}
+.menu-box{max-width:760px;margin:0 auto;background:#fff;border-radius:var(--r);padding:40px 44px;box-shadow:0 10px 30px rgba(47,140,120,.08)}
+.menu-row{display:flex;align-items:baseline;gap:12px;padding:16px 0;border-bottom:2px dotted #DCEFEA}
+.menu-row:last-child{border:0}
+.menu-row .name{font-weight:700}
+.menu-row .name small{display:block;font-weight:400;font-size:12px;color:var(--muted)}
+.menu-row .dots{flex:1}
+.menu-row .price{font-family:"Quicksand";font-weight:700;font-size:20px;color:var(--pink-d);white-space:nowrap}
+.menu-row .price small{font-size:12px;color:var(--muted)}
+.first{margin-top:28px;background:var(--pink);color:#fff;border-radius:20px;padding:18px 22px;text-align:center;font-weight:700}
+.first b{font-size:24px;font-family:"Quicksand"}
+@media (max-width:600px){.menu-box{padding:28px 22px}}
+
+/* salon */
+.salon-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.photo{position:relative}
+.photo img{border-radius:40px 120px 40px 40px;width:100%;aspect-ratio:4/3;object-fit:cover;border:8px solid #fff;box-shadow:0 14px 40px rgba(232,85,127,.15)}
+.photo::before{content:"";position:absolute;inset:auto -16px -16px auto;width:120px;height:120px;border-radius:50%;background:var(--yellow);z-index:-1}
+.photo .sticker{position:absolute;top:-18px;left:-10px;background:var(--mint);color:#fff;font-weight:700;padding:10px 18px;border-radius:999px;transform:rotate(-8deg);font-size:14px}
+.salon-txt h3{font-size:24px;margin:0 0 12px}
+.salon-txt p{color:var(--muted);margin:0 0 20px}
+.feat{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px}
+.feat li{background:#fff;border:2px solid var(--pink-l);border-radius:999px;padding:6px 16px;font-size:14px}
+@media (max-width:860px){.salon-grid{grid-template-columns:1fr}}
+
+/* staff */
+.staff-sec{background:#fff}
+.staff{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:880px;margin:0 auto}
+.person{display:flex;gap:22px;align-items:center;background:var(--pink-xl);border-radius:var(--r);padding:26px}
+.person:nth-child(2){background:var(--mint-l)}
+.person img{width:110px;height:110px;flex:none}
+.person .role{font-size:12px;color:var(--pink-d);font-weight:700}
+.person h3{margin:0 0 6px;font-size:20px}
+.person p{margin:0;font-size:14px;color:var(--muted)}
+@media (max-width:700px){.staff{grid-template-columns:1fr}.person{flex-direction:column;text-align:center}}
+
+/* voice */
+.voices{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.voice{background:#fff;border-radius:var(--r);padding:26px;position:relative}
+.voice::after{content:"";position:absolute;left:36px;bottom:-14px;border:14px solid transparent;border-top-color:#fff;border-bottom:0}
+.voice .stars{color:#F0B73A;letter-spacing:2px}
+.voice p{margin:8px 0 0;font-size:14px}
+.voice-who{margin:26px 0 0 20px;font-size:13px;color:var(--muted)}
+@media (max-width:860px){.voices{grid-template-columns:1fr}}
+
+/* access */
+.access{background:var(--pink-l)}
+.access-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.info{background:#fff;border-radius:var(--r);padding:32px}
+.info dl{margin:0;display:grid;grid-template-columns:96px 1fr;gap:12px 10px;font-size:15px}
+.info dt{font-weight:700;color:var(--pink-d)}
+.info dd{margin:0}
+.map{border-radius:var(--r);overflow:hidden;min-height:280px;background:#fff}
+.map iframe{width:100%;height:100%;min-height:280px;border:0}
+@media (max-width:860px){.access-grid{grid-template-columns:1fr}}
+
+/* cta */
+.cta{text-align:center;background:var(--pink);color:#fff;overflow:hidden}
+.cta h2{font-size:32px;margin:0 0 10px}
+.cta p{margin:0 0 30px;opacity:.95}
+.cta .btn{background:#fff;color:var(--pink-d);box-shadow:0 5px 0 var(--pink-d)}
+.cta .btns{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+.cta .btn.line{background:#06C755;color:#fff;box-shadow:0 5px 0 #04933F}
+.dots-bg{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.18) 3px,transparent 4px);background-size:28px 28px;pointer-events:none}
+
+footer{background:#fff;text-align:center;padding:36px 20px;font-size:13px;color:var(--muted)}
+footer .logo{justify-content:center;margin-bottom:8px}
+
+/* fade in */
+.fade{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.fade.show{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.fade{opacity:1;transform:none}.hero-img img{animation:none}}
+@media (max-width:600px){section{padding:72px 0}.sec-head h2{font-size:24px}.cta h2{font-size:24px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top"><span class="logo-mark">🍎</span><span><b>Pomme</b><small>HAIR SALON</small></span></a>
+    <nav class="menu" aria-label="メインメニュー">
+      <a href="#concept">こだわり</a><a href="#style">スタイル</a><a href="#price">メニュー</a><a href="#salon">サロン</a><a href="#staff">スタッフ</a><a href="#access">アクセス</a>
+    </nav>
+    <a class="btn sm" href="#reserve">ご予約</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="badge">✿ NEW OPEN ✿ 初回20%OFF</span>
+      <h1><span class="nw">ふんわり、かわいく。</span><br><span class="nw"><span class="mark">「好き」</span>がもっと</span><br><span class="nw">好きになる髪へ。</span></h1>
+      <p>ちいさな美容室 Pomme（ポム）は、<br>おしゃべりしながらゆったり過ごせる、まちの隠れ家サロン。<br>あなたらしい“かわいい”を一緒に見つけます。</p>
+      <div class="hero-btns">
+        <a class="btn" href="#reserve">♡ ネット予約する</a>
+        <a class="btn ghost" href="#style">スタイルを見る</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="images/pomme/hero.svg" alt="リボンをつけたボブヘアの女の子のイラスト" width="520" height="520">
+      <span class="bubble b1">💇‍♀️ 似合わせカットが得意</span>
+      <span class="bubble b2">🌿 髪にやさしい薬剤</span>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30c120 30 240 30 360 0s240-30 360 0 240 30 360 0 240-30 360 0v30H0z" fill="#fff"/></svg>
+</section>
+
+<section class="concept" id="concept">
+  <div class="wrap">
+    <div class="sec-head fade"><span class="en">CONCEPT</span><h2>Pommeの3つのこだわり</h2></div>
+    <div class="points">
+      <div class="point fade"><span class="num">01</span><div class="ico">💬</div><h3>じっくりカウンセリング</h3><p>なりたい雰囲気をイメージ写真と一緒に。骨格や髪質から、いちばん似合うを提案します。</p></div>
+      <div class="point fade"><span class="num">02</span><div class="ico">🌸</div><h3>髪と頭皮にやさしく</h3><p>ダメージをおさえたオーガニック系の薬剤を使用。色もちよく、つやつやの仕上がりに。</p></div>
+      <div class="point fade"><span class="num">03</span><div class="ico">☕️</div><h3>ほっとできる空間</h3><p>全4席のちいさなサロン。ハーブティーを飲みながら、のんびりお過ごしください。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="style">
+  <div class="wrap">
+    <div class="sec-head fade"><span class="en">STYLE</span><h2>人気のヘアスタイル</h2></div>
+    <div class="styles">
+      <article class="card fade"><img src="images/pomme/style-bob.svg" alt="ブラウンのぱっつんボブのイラスト" loading="lazy"><h3>ぱっつんミニボブ</h3><p>丸みシルエットで小顔見え</p><span class="tag">#ショコラブラウン</span></article>
+      <article class="card fade"><img src="images/pomme/style-wave.svg" alt="ピンクベージュのロングウェーブのイラスト" loading="lazy"><h3>ゆるふわロング</h3><p>やわらかな透け感カラー</p><span class="tag">#ピンクベージュ</span></article>
+      <article class="card fade"><img src="images/pomme/style-short.svg" alt="アッシュカラーのショートヘアのイラスト" loading="lazy"><h3>くびれショート</h3><p>朝のスタイリングも楽ちん</p><span class="tag">#ラベンダーアッシュ</span></article>
+      <article class="card fade"><img src="images/pomme/style-bun.svg" alt="お団子ヘアアレンジのイラスト" loading="lazy"><h3>ふわお団子アレンジ</h3><p>イベントや結婚式にも</p><span class="tag">#ヘアセット</span></article>
+    </div>
+  </div>
+</section>
+
+<section class="menu-sec" id="price">
+  <div class="wrap">
+    <div class="sec-head fade"><span class="en">MENU</span><h2>メニュー・料金</h2></div>
+    <div class="menu-box fade">
+      <div class="menu-row"><span class="name">カット<small>シャンプー・ブロー込み</small></span><span class="dots"></span><span class="price">¥5,500</span></div>
+      <div class="menu-row"><span class="name">カット＋カラー<small>透明感カラー・ダブルカラーは＋¥3,300</small></span><span class="dots"></span><span class="price">¥11,000</span></div>
+      <div class="menu-row"><span class="name">カット＋デジタルパーマ<small>ゆるふわ・くせ毛風</small></span><span class="dots"></span><span class="price">¥13,200</span></div>
+      <div class="menu-row"><span class="name">髪質改善トリートメント<small>うるつや髪が続く集中ケア</small></span><span class="dots"></span><span class="price">¥6,600</span></div>
+      <div class="menu-row"><span class="name">ヘアセット・アレンジ<small>お団子・編みおろしなど</small></span><span class="dots"></span><span class="price">¥4,400</span></div>
+      <div class="menu-row"><span class="name">前髪カット<small>10分ほどでさっぱり</small></span><span class="dots"></span><span class="price">¥1,100</span></div>
+      <div class="first">🎀 はじめての方は全メニュー <b>20%OFF</b> 🎀</div>
+    </div>
+    <p style="text-align:center;font-size:12px;color:var(--muted);margin-top:16px">※料金はすべて税込です。髪の長さにより料金が変わる場合があります。</p>
+  </div>
+</section>
+
+<section id="salon">
+  <div class="wrap salon-grid">
+    <div class="photo fade">
+      <span class="sticker">🪞 全4席</span>
+      <img src="salon.jpg" alt="Pommeの店内。鏡とスタイリングチェアが並ぶ" loading="lazy">
+    </div>
+    <div class="salon-txt fade">
+      <div class="sec-head" style="text-align:left;margin-bottom:24px"><span class="en">SALON</span><h2 style="display:inline-block">サロンのご紹介</h2></div>
+      <h3>まるでおうちのような、<br>ちいさな隠れ家。</h3>
+      <p>まんまるの鏡と、ふかふかのチェア。ほかのお客さまの目が気にならない、ゆとりある配置です。おひとりでもお友だち同士でも、気軽に遊びに来てください。</p>
+      <ul class="feat"><li>🧸 キッズスペースあり</li><li>📶 Wi-Fi完備</li><li>🔌 充電OK</li><li>🍵 ドリンクサービス</li><li>💳 キャッシュレス対応</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="staff-sec" id="staff">
+  <div class="wrap">
+    <div class="sec-head fade"><span class="en">STAFF</span><h2>スタッフ紹介</h2></div>
+    <div class="staff">
+      <div class="person fade"><img src="images/pomme/staff1.svg" alt="スタッフ ゆいのイラスト" loading="lazy"><div><span class="role">OWNER / STYLIST</span><h3>ゆい</h3><p>ボブと透明感カラーが得意。「ちょっと変えたい」も大歓迎！趣味はカフェめぐり☕️</p></div></div>
+      <div class="person fade"><img src="images/pomme/staff2.svg" alt="スタッフ はるとのイラスト" loading="lazy"><div><span class="role">STYLIST</span><h3>はると</h3><p>ショートとパーマならおまかせ。扱いやすさ重視で、おうちでも再現できるスタイルに。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="voice">
+  <div class="wrap">
+    <div class="sec-head fade"><span class="en">VOICE</span><h2>お客さまの声</h2></div>
+    <div class="voices">
+      <div class="fade"><div class="voice"><span class="stars">★★★★★</span><p>相談しながら決められて、思っていた以上にかわいいボブになりました！友だちにも褒められます。</p></div><p class="voice-who">20代・会社員さま</p></div>
+      <div class="fade"><div class="voice"><span class="stars">★★★★★</span><p>店内がとにかくかわいくて癒されます。カラーの色もちが良くて、毎回ここにお願いしています。</p></div><p class="voice-who">30代・主婦さま</p></div>
+      <div class="fade"><div class="voice"><span class="stars">★★★★★</span><p>子ども連れでも嫌な顔ひとつされず、キッズスペースがありがたいです。親子でカットしてもらいました。</p></div><p class="voice-who">30代・ママさま</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="access" id="access">
+  <div class="wrap">
+    <div class="sec-head fade"><span class="en">ACCESS</span><h2>アクセス・営業時間</h2></div>
+    <div class="access-grid">
+      <div class="info fade">
+        <dl>
+          <dt>店名</dt><dd>hair salon Pomme（ポム）</dd>
+          <dt>住所</dt><dd>〒000-0000<br>〇〇県〇〇市〇〇町1-2-3 ポムビル2F</dd>
+          <dt>アクセス</dt><dd>〇〇駅 東口から徒歩3分</dd>
+          <dt>営業時間</dt><dd>10:00〜19:00（最終受付 18:00）</dd>
+          <dt>定休日</dt><dd>毎週火曜日・第3水曜日</dd>
+          <dt>電話</dt><dd>000-0000-0000</dd>
+        </dl>
+      </div>
+      <div class="map fade">
+        <iframe title="地図" src="https://www.google.com/maps?q=Tokyo%20Station&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="reserve">
+  <div class="dots-bg" aria-hidden="true"></div>
+  <div class="wrap" style="position:relative">
+    <p class="en" style="font-weight:700;margin-bottom:6px">RESERVATION</p>
+    <h2>あなたのご来店を<br>こころよりお待ちしています♡</h2>
+    <p>ネット予約なら24時間いつでもOK。<br>LINEからのご相談もお気軽にどうぞ。</p>
+    <div class="btns">
+      <a class="btn" href="#">📅 ネットで予約する</a>
+      <a class="btn line" href="#">💬 LINEで相談する</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <a class="logo" href="#top"><span class="logo-mark">🍎</span><span><b>Pomme</b><small>HAIR SALON</small></span></a>
+  <small>© 2026 hair salon Pomme</small>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
